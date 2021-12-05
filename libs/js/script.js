@@ -4,7 +4,7 @@ var countImages = thumnails.length;
 var colors = document.querySelectorAll(".product-color div");
 var selectSize = document.getElementById("select-size");
 var selectColor = document.querySelector(".product-color");
-
+var btn = document.getElementById("add");
 var currentSize = "S";
 
 var basket = document.querySelector(".basket");
@@ -29,6 +29,12 @@ selectSize.addEventListener(
   function () {
     currentSize = this.value;
     availability(currentSize);
+    let status = document.querySelector(".product-availability p").innerHTML;
+    if (status === "Not available") {
+      btn.setAttribute("disabled", "");
+    } else {
+      btn.removeAttribute("disabled");
+    }
   },
   false
 );
@@ -36,6 +42,12 @@ selectColor.addEventListener(
   "click",
   function () {
     availability(currentSize);
+    let status = document.querySelector(".product-availability p").innerHTML;
+    if (status === "Not available") {
+      btn.setAttribute("disabled", "");
+    } else {
+      btn.removeAttribute("disabled");
+    }
   },
   false
 );
