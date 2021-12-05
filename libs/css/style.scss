@@ -264,9 +264,8 @@ html {
 }
 
 .footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    margin-top: 200px;
+    
     .links {
         display: flex;
         justify-content: center;
@@ -340,4 +339,12 @@ html {
         margin-left: 20px;
     }
     
+}
+
+@media screen and (min-height: "835px") {
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }

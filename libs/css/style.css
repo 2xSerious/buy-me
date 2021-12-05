@@ -336,9 +336,7 @@ html {
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  margin-top: 200px;
 }
 
 .footer .links {
@@ -419,6 +417,14 @@ html {
   .notification {
     margin-top: 25px;
     margin-left: 20px;
+  }
+}
+
+@media screen and (min-height: 835px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
